@@ -14,23 +14,32 @@
       <div class="sideBar">
         <h2>Menu Bar</h2>
         <p>Primary Color</p>
-        <input type="color" class="colorpicker" value="#000000" />
+        <input
+          type="color"
+          class="colorpicker"
+          value="#000000"
+          onchange="setColor()"
+        />
         <p class="sizePickerText">Size: 16x16</p>
-        <input type="range" class="sizePicker" value="16" min="1" max="64" onchange="changeSizeText()"/>
+        <input
+          type="range"
+          class="sizePicker"
+          value="16"
+          min="1"
+          max="64"
+          onchange="changeSizeText()"
+        />
         <button class="sizePickerButton" onclick="changeSize()">
           Change Size
         </button>
         <button class="rainbow" onclick="rainbowToggle()">Rainbow</button>
-        <button class="darken" onclick="darkenToggle()">Darken</button>
         <button class="eraser" onclick="eraserToggle()">Eraser</button>
         <button class="gridLinesToggle" onclick="gridLinesToggle()">
           Grid Lines
         </button>
         <button class="clearButton" onclick="clearGrid()">Clear</button>
       </div>
-      <div id="etchGrid">
-
-      </div>
+      <div id="etchGrid"></div>
     </div>
     <footer>Made by Brody</footer>
   </body>
