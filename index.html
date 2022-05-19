@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+    <header>Etch-a-Sketch</header>
+    <div class="middle">
+      <div class="sideBar">
+        <h2>Menu Bar</h2>
+        <p>Primary Color</p>
+        <input type="color" class="colorpicker" value="#000000" />
+        <p class="sizePickerText">Size: 16x16</p>
+        <input type="range" class="sizePicker" value="16" min="1" max="100" />
+        <button class="sizePickerButton" onclick="changeSize()">
+          Change Size
+        </button>
+        <button class="rainbow" onclick="rainbowToggle()">Rainbow</button>
+        <button class="darken" onclick="darkenToggle()">Darken</button>
+        <button class="eraser" onclick="eraserToggle()">Eraser</button>
+        <button class="gridLinesToggle" onclick="gridLinesToggle()">
+          Grid Lines
+        </button>
+        <button class="clearButton" onclick="clearGrid()">Clear</button>
+      </div>
+      <div class="etchGrid">
+        <div class="block"></div>
+      </div>
+    </div>
+    <footer>Made by Brody</footer>
+  </body>
+</html>
