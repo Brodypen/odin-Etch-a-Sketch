@@ -8,7 +8,7 @@ function makeGrid(size){
     etchGrid.style.gridTemplateColumns = 'repeat(' + size + ', 1fr)';
     etchGrid.style.gridTemplateRows = "repeat(" + size + ", 1fr)";
     block = document.createElement("div");
-    block.classList.add('gridBlock');
+    block.classList.add('gridBlock', 'gridBlockBorder');
     for(let i = 0; i < size * size; i++){
     etchGrid.appendChild(block.cloneNode(true));
     }
@@ -16,7 +16,14 @@ function makeGrid(size){
 
 function rainbowToggle() {}
 function darkenToggle() {}
-function gridLinesToggle() {}
+function gridLinesToggle() {
+    const collection = document.getElementsByClassName('gridBlock');
+    const size = document.querySelector(".sizePicker").value;
+    console.log(collection);
+    for(let i = 0; i < size * size; i++){
+        collection[i].classList.toggle('gridBlockBorder');
+    }
+}
 function eraserToggle(){
 
 }
