@@ -62,7 +62,6 @@ button:hover {
 /* Etch a sketch stuff */
 #etchGrid {
   background-color: white;
-  border: 1vh solid var(--blue);
   display: grid;
   height: auto;
   aspect-ratio: 1/1;
@@ -70,4 +69,9 @@ button:hover {
   padding: 0;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
+}
+.gridBlock {
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
 }
