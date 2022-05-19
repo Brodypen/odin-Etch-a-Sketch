@@ -16,7 +16,7 @@
         <p>Primary Color</p>
         <input type="color" class="colorpicker" value="#000000" />
         <p class="sizePickerText">Size: 16x16</p>
-        <input type="range" class="sizePicker" value="16" min="1" max="100" />
+        <input type="range" class="sizePicker" value="16" min="1" max="64" onchange="changeSizeText()"/>
         <button class="sizePickerButton" onclick="changeSize()">
           Change Size
         </button>
