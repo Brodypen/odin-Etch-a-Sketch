@@ -26,13 +26,6 @@ footer {
   width: 100vw;
   flex: 1;
 }
-.etchGrid {
-  background-color: white;
-  border: 1vh solid var(--blue);
-  display: grid;
-  height: auto;
-  aspect-ratio: 1/1;
-}
 .block {
   border: 1px solid rgba(0, 0, 0, 0.01);
 }
@@ -66,3 +59,15 @@ button:hover {
 /* html, img, video, iframe {
      filter: invert(1) hue-rotate(180deg)
 } */
+/* Etch a sketch stuff */
+#etchGrid {
+  background-color: white;
+  border: 1vh solid var(--blue);
+  display: grid;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+}

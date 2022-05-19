@@ -1,4 +1,14 @@
 let color = "#000000";
+makeGrid(16);
+function makeGrid(size){
+    etchGrid = document.getElementById("etchGrid");
+    block = document.createElement("div");
+    block.classList.add('gridBlock');
+    for(let i = 0; i < size * size; i++){
+    etchGrid.appendChild(block);
+    }
+}
+
 function rainbowToggle() {}
 function darkenToggle() {}
 function gridLinesToggle() {}
