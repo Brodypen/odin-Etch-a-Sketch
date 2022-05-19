@@ -21,6 +21,7 @@ function makeGrid(size) {
     block.classList.add("gridBlock", "gridBlockBorder");
     block.addEventListener("mouseover", changeBlock);
     block.addEventListener("mousedown", changeBlock);
+    block.setAttribute('draggable', false);
     etchGrid.appendChild(block);
   }
 }
@@ -38,7 +39,6 @@ function changeBlock(e) {
 function rainbowToggle() {
   rainbowToggler = !rainbowToggler;
 }
-
 function gridLinesToggle() {
   const collection = document.getElementsByClassName("gridBlock");
   console.log(collection);
@@ -47,6 +47,7 @@ function gridLinesToggle() {
   }
 }
 function eraserToggle() {
+  rainbowToggler = false;
   const temp = color;
   color = tempColor;
   tempColor = temp;
