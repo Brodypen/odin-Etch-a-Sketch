@@ -9,6 +9,7 @@ sizeSlider.onmousemove = (e) => changeSizeText();
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
+document.body.onmouseleave = () => (mouseDown = false); // when the cursor leaves the window
 function makeGrid(size) {
   etchGrid = document.getElementById("etchGrid");
   while (etchGrid.firstChild) {
@@ -21,7 +22,6 @@ function makeGrid(size) {
     block.classList.add("gridBlock", "gridBlockBorder");
     block.addEventListener("mouseover", changeBlock);
     block.addEventListener("mousedown", changeBlock);
-    block.setAttribute('draggable', false);
     etchGrid.appendChild(block);
   }
 }

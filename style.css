@@ -73,6 +73,7 @@ button:hover {
 .gridBlock {
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 .gridBlockBorder {
   border: 1px solid black;
